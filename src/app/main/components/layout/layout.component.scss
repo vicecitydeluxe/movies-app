@@ -1,0 +1,16 @@
+table {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  div {
+    display: grid;
+    margin: 20px;
+    justify-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    img {
+      width: 300px;
+    }
+    cursor: pointer;
+  }
+}
