@@ -30,14 +30,14 @@ export interface IMovieDetails {
 export class ApiService {
   constructor(private http: HttpClient) {}
 
-  FIND_MOVIE_DETAILS = 'http://www.omdbapi.com/?i=IMDBID&apikey=dc9ce8dd';
+  FIND_MOVIE_DETAILS = 'https://www.omdbapi.com/?i=IMDBID&apikey=dc9ce8dd';
   findMovieDetails(imdbID: string): Observable<IMovieDetails> {
     const url = this.FIND_MOVIE_DETAILS.replace('IMDBID', imdbID);
     return this.http.get<IMovieDetails>(url);
   }
 
   getMovies(title: string, page: number): Observable<IMovies> {
-    const url = `http://www.omdbapi.com/?s=${title}&page=${page}&apikey=dc9ce8dd`;
+    const url = `https://www.omdbapi.com/?s=${title}&page=${page}&apikey=dc9ce8dd`;
     return this.http.get<IMovies>(url);
   }
 }
