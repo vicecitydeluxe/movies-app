@@ -10,6 +10,7 @@ import { IPage } from '../paginator/paginator.component';
   styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent implements OnInit {
+  
   movieTitle: any;
 
   details: IMovieDetails = {
@@ -29,7 +30,7 @@ export class LayoutComponent implements OnInit {
   searchForMovie(movieTitle: any) {
     // console.log(movieTitle);
     this.movieTitle = movieTitle;
-    this.ApiService.getMovies(movieTitle, 1).subscribe((res) => {
+    this.ApiService.getMovies(movieTitle.replace( / /g, "+" ), 1).subscribe((res) => {
       this.movies = res.Search;
       this.pagesTotal = +res.totalResults;
     });
