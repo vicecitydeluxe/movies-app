@@ -5,7 +5,6 @@ import { IMovieDetails } from '../../services/api.service';
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.scss']
 })
 export class DialogComponent implements OnInit {
 

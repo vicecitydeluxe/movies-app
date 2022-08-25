@@ -28,7 +28,6 @@ export class LayoutComponent implements OnInit {
   constructor(private ApiService: ApiService, private dialog: MatDialog) {}
 
   searchForMovie(movieTitle: any) {
-    // console.log(movieTitle);
     this.movieTitle = movieTitle;
     this.ApiService.getMovies(movieTitle.replace( / /g, "+" ), 1).subscribe((res) => {
       this.movies = res.Search;
@@ -44,7 +43,6 @@ export class LayoutComponent implements OnInit {
   }
 
   getMovies(page: IPage) {
-    // console.log(page);
     this.ApiService.getMovies(this.movieTitle, page.pageIndex + 1).subscribe(
       (res) => {
         this.pagesTotal = +res.totalResults;
