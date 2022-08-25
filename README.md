@@ -1,5 +1,5 @@
 # MoviesApp
-[Deployed app (GitHub Pages)](https://vicecitydeluxe.github.io/movies-app/main)
+[Deployed app (GitHub Pages)](https://vicecitydeluxe.github.io/movies-app/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
 
